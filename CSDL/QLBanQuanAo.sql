@@ -43,6 +43,7 @@ CREATE TABLE HoaDon(
 	DiaChi nvarchar(500),
 	ThoiGian datetime,
 	LoaiHoaDon BIT, --0: hoa don nhap 1: hoa don xuat
+	TongTien int,
 	ID int,
 	FOREIGN KEY(ID) REFERENCES TaiKhoan(ID) ON DELETE CASCADE ON UPDATE CASCADE
 )
