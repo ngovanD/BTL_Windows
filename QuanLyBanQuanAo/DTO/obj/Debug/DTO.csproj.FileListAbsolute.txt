@@ -1,0 +1,11 @@
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\DTO.exe.config
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\DTO.exe
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\DTO.pdb
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\EntityFramework.dll
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\EntityFramework.SqlServer.dll
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\EntityFramework.xml
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\bin\Debug\EntityFramework.SqlServer.xml
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.CopyComplete
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.exe
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.pdb

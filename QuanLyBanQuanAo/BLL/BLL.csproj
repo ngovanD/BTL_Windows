@@ -54,10 +54,6 @@
       <Project>{199f069f-7c03-4c7f-9f7d-dbdbb0b71820}</Project>
       <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{1f382b85-50f9-4c10-8362-f80fed4053f4}</Project>
-      <Name>DTO</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

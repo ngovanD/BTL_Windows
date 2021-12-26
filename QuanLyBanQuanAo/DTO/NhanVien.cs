@@ -9,6 +9,12 @@ namespace DTO
     [Table("NhanVien")]
     public partial class NhanVien
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NhanVien()
+        {
+            Luongs = new HashSet<Luong>();
+        }
+
         [Key]
         public int MaNhanVien { get; set; }
 
@@ -18,16 +24,10 @@ namespace DTO
         [StringLength(500)]
         public string DiaChi { get; set; }
 
-        [StringLength(10)]
-        public string SDT { get; set; }
-
-        public int? NgayCong { get; set; }
-
-        public int? Luong1Ngay { get; set; }
-
-        public int? Thuong { get; set; }
-
         public int? ID { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Luong> Luongs { get; set; }
 
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
