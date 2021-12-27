@@ -6,7 +6,7 @@ GO
 
 CREATE TABLE TaiKhoan(
 	ID int IDENTITY(1,1) PRIMARY KEY,
-	TenDangNhap varchar(100),
+	TenDangNhap varchar(100) UNIQUE,
 	MatKhau varchar(100),
 	LoaiTaiKhoan BIT, --0: admin 1: nhan vien
 )
@@ -32,7 +32,7 @@ CREATE TABLE KhuyenMai(
 )
 
 CREATE TABLE HoaDon(
-	MaHoaDon int IDENTITY(1,1) PRIMARY KEY,
+	MaHoaDon varchar(13) PRIMARY KEY,
 	DiaChi nvarchar(500),
 	ThoiGian datetime,
 	LoaiHoaDon BIT, --0: hoa don nhap 1: hoa don xuat
@@ -58,7 +58,7 @@ CREATE TABLE SanPham(
 
 CREATE TABLE DongHoaDon(
 	MaSanPham int,
-	MaHoaDon int,
+	MaHoaDon varchar(13),
 	SoLuong int,
 	FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(MaHoaDon) REFERENCES HoaDon(MaHoaDon) ON DELETE CASCADE ON UPDATE CASCADE,
