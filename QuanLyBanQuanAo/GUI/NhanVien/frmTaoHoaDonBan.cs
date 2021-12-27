@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 
 namespace GUI.NhanVien
 {
@@ -19,8 +20,14 @@ namespace GUI.NhanVien
 
         private void frmTaoHoaDonBan_Load(object sender, EventArgs e)
         {
-
+            lblMaHoaDon.Text = HoaDonBLL.Instance.TaoMaHoaDon(true);
         }
+
+        private void tmrHienThiThoiGian_Tick(object sender, EventArgs e)
+        {
+            lblThoiGian.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+        }
+
         private void dgvDanhSachSanPham_SelectionChanged(object sender, EventArgs e)
         {
 

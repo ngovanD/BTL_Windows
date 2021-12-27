@@ -29,6 +29,7 @@ namespace GUI.NhanVien
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtTimTenSP = new System.Windows.Forms.TextBox();
             this.cbxLocLoaiSP = new System.Windows.Forms.ComboBox();
@@ -97,6 +98,7 @@ namespace GUI.NhanVien
             this.label17 = new System.Windows.Forms.Label();
             this.lblTienThua = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.tmrHienThiThoiGian = new System.Windows.Forms.Timer(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSachSanPham)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -471,10 +473,10 @@ namespace GUI.NhanVien
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1308, 22);
+            this.label7.Size = new System.Drawing.Size(1308, 44);
             this.label7.TabIndex = 1;
             this.label7.Text = "TẠO HÓA ĐƠN BÁN";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -484,9 +486,9 @@ namespace GUI.NhanVien
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(12, 34);
+            this.panel1.Location = new System.Drawing.Point(12, 56);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1308, 96);
+            this.panel1.Size = new System.Drawing.Size(1308, 74);
             this.panel1.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -507,16 +509,16 @@ namespace GUI.NhanVien
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1306, 94);
-            this.tableLayoutPanel1.TabIndex = 2;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1306, 72);
+            this.tableLayoutPanel1.TabIndex = 3;
             // 
             // lblNhanVien
             // 
             this.lblNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNhanVien.Location = new System.Drawing.Point(656, 65);
+            this.lblNhanVien.Location = new System.Drawing.Point(656, 51);
             this.lblNhanVien.Margin = new System.Windows.Forms.Padding(3);
             this.lblNhanVien.Name = "lblNhanVien";
-            this.lblNhanVien.Size = new System.Drawing.Size(647, 26);
+            this.lblNhanVien.Size = new System.Drawing.Size(647, 18);
             this.lblNhanVien.TabIndex = 4;
             this.lblNhanVien.Text = "Chưa có";
             this.lblNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -524,10 +526,10 @@ namespace GUI.NhanVien
             // lblThoiGian
             // 
             this.lblThoiGian.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblThoiGian.Location = new System.Drawing.Point(656, 34);
+            this.lblThoiGian.Location = new System.Drawing.Point(656, 27);
             this.lblThoiGian.Margin = new System.Windows.Forms.Padding(3);
             this.lblThoiGian.Name = "lblThoiGian";
-            this.lblThoiGian.Size = new System.Drawing.Size(647, 25);
+            this.lblThoiGian.Size = new System.Drawing.Size(647, 18);
             this.lblThoiGian.TabIndex = 3;
             this.lblThoiGian.Text = "Chưa có";
             this.lblThoiGian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -539,7 +541,7 @@ namespace GUI.NhanVien
             this.lblMaHoaDon.Location = new System.Drawing.Point(656, 3);
             this.lblMaHoaDon.Margin = new System.Windows.Forms.Padding(3);
             this.lblMaHoaDon.Name = "lblMaHoaDon";
-            this.lblMaHoaDon.Size = new System.Drawing.Size(647, 25);
+            this.lblMaHoaDon.Size = new System.Drawing.Size(647, 18);
             this.lblMaHoaDon.TabIndex = 2;
             this.lblMaHoaDon.Text = "Chưa có";
             this.lblMaHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,7 +553,7 @@ namespace GUI.NhanVien
             this.label8.Location = new System.Drawing.Point(3, 3);
             this.label8.Margin = new System.Windows.Forms.Padding(3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(647, 25);
+            this.label8.Size = new System.Drawing.Size(647, 18);
             this.label8.TabIndex = 1;
             this.label8.Text = "Mã hóa đơn:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -559,10 +561,10 @@ namespace GUI.NhanVien
             // label9
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(3, 34);
+            this.label9.Location = new System.Drawing.Point(3, 27);
             this.label9.Margin = new System.Windows.Forms.Padding(3);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(647, 25);
+            this.label9.Size = new System.Drawing.Size(647, 18);
             this.label9.TabIndex = 1;
             this.label9.Text = "Thời gian:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -570,12 +572,12 @@ namespace GUI.NhanVien
             // label10
             // 
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(3, 65);
+            this.label10.Location = new System.Drawing.Point(3, 51);
             this.label10.Margin = new System.Windows.Forms.Padding(3);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(647, 26);
+            this.label10.Size = new System.Drawing.Size(647, 18);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Nhân viên";
+            this.label10.Text = "Nhân viên:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox1
@@ -796,6 +798,11 @@ namespace GUI.NhanVien
             this.label18.TabIndex = 1;
             this.label18.Text = "Tiền thừa:";
             // 
+            // tmrHienThiThoiGian
+            // 
+            this.tmrHienThiThoiGian.Enabled = true;
+            this.tmrHienThiThoiGian.Tick += new System.EventHandler(this.tmrHienThiThoiGian_Tick);
+            // 
             // frmTaoHoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -894,12 +901,13 @@ namespace GUI.NhanVien
         private System.Windows.Forms.DataGridViewTextBoxColumn KichThuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongMua;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
+        private System.Windows.Forms.Timer tmrHienThiThoiGian;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblNhanVien;
         private System.Windows.Forms.Label lblThoiGian;
         private System.Windows.Forms.Label lblMaHoaDon;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblNhanVien;
     }
 }
