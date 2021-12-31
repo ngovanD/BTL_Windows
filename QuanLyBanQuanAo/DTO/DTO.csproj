@@ -51,11 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLBanQuanAoContext.cs" />
-    <Compile Include="TaiKhoan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
