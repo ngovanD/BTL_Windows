@@ -9,6 +9,9 @@ D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\bin\Debug\DTO.pdb
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\bin\Debug\DTO.exe.config
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
-D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\obj\Debug\BLL.exe
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\obj\Debug\BLL.pdb
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\bin\Debug\EntityFramework.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\bin\Debug\EntityFramework.xml
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\BLL\bin\Debug\EntityFramework.SqlServer.xml
