@@ -27,19 +27,26 @@ namespace GUI.QuanTri
         
         private void dgvTaiKhoan_SelectionChanged(object sender, EventArgs e)
         {
+            btnThem.Text = "Thêm";
             var maNV = dgvNhanVien.CurrentRow.Cells["MaNhanVien"].Value.ToString();
 
             DTO.NhanVien nv = NhanVienBLL.Instance.LayNhanVienTheoMa(maNV);
 
             if (nv != null)
             {
-                txtMaNV.ReadOnly = true;
                 txtMaNV.Text = nv.MaNhanVien;
                 txtHoTen.Text = nv.HoTen;
                 dtpNgaySinh.Value = Convert.ToDateTime(nv.NgaySinh);
                 txtDiaChi.Text = nv.DiaChi;
                 txtTenDN.Text = nv.TaiKhoan.TenDangNhap;
                 txtMatKhau.Text = nv.TaiKhoan.MatKhau;
+
+                txtMaNV.ReadOnly = true;
+                txtHoTen.ReadOnly = true;
+                dtpNgaySinh.Enabled = false;
+                txtSoDT.ReadOnly = true;
+                txtDiaChi.ReadOnly = true;
+                txtTenDN.ReadOnly = true;
             }
         }
         
@@ -133,70 +140,62 @@ namespace GUI.QuanTri
 
         private void btnLayMK_Click(object sender, EventArgs e)
         {
-            var maNV = txtMaNV.Text;
+            DTO.NhanVien nv = NhanVienBLL.Instance.LayNhanVienTheoMa(txtMaNV.Text);
 
-            if(maNV.Trim().Length == 0)
+            if (nv != null)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên để lấy lại mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                DTO.NhanVien nv = NhanVienBLL.Instance.LayNhanVienTheoMa(maNV);
-
-                if (nv != null)
+                var d = MessageBox.Show("Bạn có muốn lấy lại mật khẩu cho nhân viên này", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (d == DialogResult.OK)
                 {
-                    var d = MessageBox.Show("Bạn có muốn lấy lại mật khẩu cho nhân viên này", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    if (d == DialogResult.OK)
+                    try
                     {
-                        try
-                        {
-                            nv.TaiKhoan.MatKhau = nv.TaiKhoan.TenDangNhap;
-                            NhanVienBLL.Instance.CapNhatNhanVien(nv, 2);
-                            MessageBox.Show("Lấy lại mật khẩu cho nhân viên thành công! Mật khẩu của nhân viên là tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        nv.TaiKhoan.MatKhau = nv.TaiKhoan.TenDangNhap;
+                        NhanVienBLL.Instance.CapNhatNhanVien(nv, 2);
+                        MessageBox.Show("Lấy lại mật khẩu cho nhân viên thành công! Mật khẩu của nhân viên là tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            HienThiMacDinh(true);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Lỗi: " + ex, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        HienThiMacDinh(true);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi: " + ex, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên để lấy lại mật khẩu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var maNV = txtMaNV.Text;
+            DTO.NhanVien nv = NhanVienBLL.Instance.LayNhanVienTheoMa(txtMaNV.Text);
 
-            if (maNV.Trim().Length == 0)
+            if (nv != null)
             {
-                MessageBox.Show("Vui lòng chọn nhân viên để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                DTO.NhanVien nv = NhanVienBLL.Instance.LayNhanVienTheoMa(maNV);
-
-                if (nv != null)
+                var d = MessageBox.Show("Bạn có muốn xóa nhân viên này", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (d == DialogResult.OK)
                 {
-                    var d = MessageBox.Show("Bạn có muốn xóa nhân viên này", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-                    if (d == DialogResult.OK)
+                    try
                     {
-                        try
-                        {
-                            nv.TaiKhoan.MatKhau = nv.TaiKhoan.TenDangNhap;
-                            NhanVienBLL.Instance.CapNhatNhanVien(nv, 1);
-                            MessageBox.Show("Xóa nhân viên thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        nv.TaiKhoan.MatKhau = nv.TaiKhoan.TenDangNhap;
+                        NhanVienBLL.Instance.CapNhatNhanVien(nv, 1);
+                        MessageBox.Show("Xóa nhân viên thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            HienThiMacDinh(true);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Lỗi: " + ex, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        HienThiMacDinh(true);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi: " + ex, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
        
         private void btnThoat_Click(object sender, EventArgs e)
@@ -206,16 +205,23 @@ namespace GUI.QuanTri
 
         private void HienThiMacDinh(bool status)
         {
+            if (status)
+            {
+                NhanVienBLL.Instance.HienThiDanhSach(dgvNhanVien, null);
+            }
             txtMaNV.ReadOnly = false;
             txtMaNV.Text = "";
             txtHoTen.Text = "";
             txtDiaChi.Text = "";
             txtTenDN.Text = "";
             txtMatKhau.Text = "";
-            if (status)
-            {
-                NhanVienBLL.Instance.HienThiDanhSach(dgvNhanVien, null);
-            }
+            dtpNgaySinh.Value = DateTime.Now;
+
+            txtHoTen.ReadOnly = false;
+            dtpNgaySinh.Enabled = true;
+            txtSoDT.ReadOnly = false;
+            txtDiaChi.ReadOnly = false;
+            txtTenDN.ReadOnly = false;
         }
 
         public string ChuyenKhongDau(string text)

@@ -36,8 +36,11 @@ namespace GUI.QuanTri
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtSoDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
@@ -50,9 +53,6 @@ namespace GUI.QuanTri
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtSoDT = new System.Windows.Forms.TextBox();
             this.MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -148,6 +148,16 @@ namespace GUI.QuanTri
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(608, 140);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 31);
+            this.btnThoat.TabIndex = 10;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(119, 172);
@@ -157,12 +167,29 @@ namespace GUI.QuanTri
             this.txtMatKhau.Size = new System.Drawing.Size(188, 20);
             this.txtMatKhau.TabIndex = 6;
             // 
+            // txtSoDT
+            // 
+            this.txtSoDT.Location = new System.Drawing.Point(119, 94);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.Size = new System.Drawing.Size(188, 20);
+            this.txtSoDT.TabIndex = 4;
+            this.txtSoDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDT_KeyPress);
+            // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(119, 120);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(188, 20);
             this.txtDiaChi.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(23, 123);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Địa chỉ:";
             // 
             // label5
             // 
@@ -228,6 +255,7 @@ namespace GUI.QuanTri
             // 
             this.txtMaNV.Location = new System.Drawing.Point(119, 16);
             this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
             this.txtMaNV.Size = new System.Drawing.Size(188, 20);
             this.txtMaNV.TabIndex = 1;
             // 
@@ -275,33 +303,6 @@ namespace GUI.QuanTri
             this.dgvNhanVien.Size = new System.Drawing.Size(690, 213);
             this.dgvNhanVien.TabIndex = 0;
             this.dgvNhanVien.SelectionChanged += new System.EventHandler(this.dgvTaiKhoan_SelectionChanged);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.Location = new System.Drawing.Point(608, 140);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 31);
-            this.btnThoat.TabIndex = 10;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(23, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Địa chỉ:";
-            // 
-            // txtSoDT
-            // 
-            this.txtSoDT.Location = new System.Drawing.Point(119, 94);
-            this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(188, 20);
-            this.txtSoDT.TabIndex = 4;
-            this.txtSoDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoDT_KeyPress);
             // 
             // MaNhanVien
             // 
