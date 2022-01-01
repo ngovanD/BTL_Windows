@@ -12,7 +12,7 @@ namespace DTO
         {
         }
 
-        public virtual DbSet<CHiTietSanPham> CHiTietSanPhams { get; set; }
+        public virtual DbSet<ChiTietSanPham> ChiTietSanPhams { get; set; }
         public virtual DbSet<DongHoaDon> DongHoaDons { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhuyenMai> KhuyenMais { get; set; }
@@ -25,6 +25,14 @@ namespace DTO
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<DongHoaDon>()
+                .Property(e => e.MaHoaDon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<HoaDon>()
+                .Property(e => e.MaHoaDon)
+                .IsUnicode(false);
+
             modelBuilder.Entity<KhuyenMai>()
                 .Property(e => e.Code)
                 .IsUnicode(false);
@@ -39,8 +47,18 @@ namespace DTO
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<NhanVien>()
+                .Property(e => e.MaNhanVien)
+                .IsFixedLength()
+                .IsUnicode(false);
+
+            modelBuilder.Entity<NhanVien>()
+                .Property(e => e.SoDienThoai)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<NhanVien>()
                 .HasMany(e => e.Luongs)
                 .WithOptional(e => e.NhanVien)
+                .HasForeignKey(e => e.MaNhanVien)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<SanPham>()
@@ -63,6 +81,7 @@ namespace DTO
             modelBuilder.Entity<TaiKhoan>()
                 .HasMany(e => e.NhanViens)
                 .WithOptional(e => e.TaiKhoan)
+                .HasForeignKey(e => e.IdTK)
                 .WillCascadeOnDelete();
         }
     }

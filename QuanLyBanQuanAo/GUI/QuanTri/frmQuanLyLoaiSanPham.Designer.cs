@@ -33,7 +33,7 @@ namespace GUI
             this.txtTenLoaiSanPham = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaLoaiSanPham = new System.Windows.Forms.TextBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.dtgvDanhSachLoaiSanPham = new System.Windows.Forms.DataGridView();
@@ -69,6 +69,7 @@ namespace GUI
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label2
             // 
@@ -79,13 +80,13 @@ namespace GUI
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã loại sản phẩm:";
             // 
-            // textBox1
+            // txtMaLoaiSanPham
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(180, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(234, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtMaLoaiSanPham.Location = new System.Drawing.Point(180, 37);
+            this.txtMaLoaiSanPham.Name = "txtMaLoaiSanPham";
+            this.txtMaLoaiSanPham.ReadOnly = true;
+            this.txtMaLoaiSanPham.Size = new System.Drawing.Size(234, 20);
+            this.txtMaLoaiSanPham.TabIndex = 1;
             // 
             // btnSua
             // 
@@ -95,6 +96,7 @@ namespace GUI
             this.btnSua.TabIndex = 4;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -104,6 +106,7 @@ namespace GUI
             this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // dtgvDanhSachLoaiSanPham
             // 
@@ -116,6 +119,7 @@ namespace GUI
             this.dtgvDanhSachLoaiSanPham.Name = "dtgvDanhSachLoaiSanPham";
             this.dtgvDanhSachLoaiSanPham.Size = new System.Drawing.Size(496, 194);
             this.dtgvDanhSachLoaiSanPham.TabIndex = 6;
+            this.dtgvDanhSachLoaiSanPham.SelectionChanged += new System.EventHandler(this.dtgvDanhSachLoaiSanPham_SelectionChanged);
             // 
             // MaLoaiSanPham
             // 
@@ -146,6 +150,7 @@ namespace GUI
             this.btnTim.TabIndex = 7;
             this.btnTim.Text = "Tìm";
             this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // btnTroLai
             // 
@@ -168,11 +173,12 @@ namespace GUI
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMaLoaiSanPham);
             this.Controls.Add(this.txtTenLoaiSanPham);
             this.Controls.Add(this.label1);
             this.Name = "frmQuanLyLoaiSanPham";
             this.Text = "Quản lý loại sản phẩm";
+            this.Load += new System.EventHandler(this.frmQuanLyLoaiSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachLoaiSanPham)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -185,7 +191,7 @@ namespace GUI
         private System.Windows.Forms.TextBox txtTenLoaiSanPham;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaLoaiSanPham;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.DataGridView dtgvDanhSachLoaiSanPham;

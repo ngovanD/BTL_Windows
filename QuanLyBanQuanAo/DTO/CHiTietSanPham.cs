@@ -6,8 +6,8 @@ namespace DTO
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CHiTietSanPham")]
-    public partial class CHiTietSanPham
+    [Table("ChiTietSanPham")]
+    public partial class ChiTietSanPham
     {
         [Key]
         [Column(Order = 0)]

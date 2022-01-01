@@ -21,8 +21,8 @@ namespace DTO
 
         [Key]
         [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaHoaDon { get; set; }
+        [StringLength(14)]
+        public string MaHoaDon { get; set; }
 
         public int? SoLuong { get; set; }
 

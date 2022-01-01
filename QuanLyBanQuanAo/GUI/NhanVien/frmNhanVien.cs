@@ -12,14 +12,18 @@ namespace GUI
 {
     public partial class frmNhanVien : Form
     {
-        public frmNhanVien()
+        private string tenDangNhap;
+
+        public frmNhanVien(string tenDangNhap)
         {
+            this.tenDangNhap = tenDangNhap;
             InitializeComponent();
         }
 
         private void xemThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new frmThongTinTaiKhoan(tenDangNhap).ShowDialog();
+            Close();
         }
     }
 }

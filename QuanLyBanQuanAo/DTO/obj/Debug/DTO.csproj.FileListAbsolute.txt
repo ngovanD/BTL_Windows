@@ -9,3 +9,4 @@ F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\
 F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.CopyComplete
 F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.exe
 F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.pdb
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache

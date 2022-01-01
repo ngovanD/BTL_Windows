@@ -28,3 +28,4 @@ F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\
 F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\DTO.exe.config
 F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\EntityFramework.SqlServer.dll
 F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\EntityFramework.SqlServer.xml
+F:\Download\Homework\ki7\LapTrinhWindow\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\obj\Debug\GUI.NhanVien.frmDoiMatKhauNhanVien.resources

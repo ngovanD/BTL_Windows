@@ -13,8 +13,15 @@ namespace GUI
 {
     public partial class frmDangNhap : Form
     {
+        private string tenDangNhap;
+
         public frmDangNhap()
         {
+            InitializeComponent();
+        }
+        public frmDangNhap(string tenDangNhap)
+        {
+            this.tenDangNhap = tenDangNhap;
             InitializeComponent();
         }
 
@@ -23,17 +30,19 @@ namespace GUI
             string tenDangNhap = txtTenDangNhap.Text;
             string matKhau = txtMatKhau.Text;
             bool check = TaiKhoanBLL.Instance.KiemTraTaiKhoan(tenDangNhap, matKhau);
-            if(check)
+            if (check)
             {
-                if(TaiKhoanBLL.Instance.LaTaiKhoanNhanVien(tenDangNhap))
+                
+                if (TaiKhoanBLL.Instance.LaTaiKhoanNhanVien(tenDangNhap))
                 {
-                    new frmNhanVien().ShowDialog();
+                    new frmNhanVien(tenDangNhap).ShowDialog();
+                    Close();
                 }
                 else
                 {
                     new frmQuanTri().ShowDialog();
+                    Close();
                 }
-                Close();
             }
             else
             {
@@ -44,6 +53,11 @@ namespace GUI
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

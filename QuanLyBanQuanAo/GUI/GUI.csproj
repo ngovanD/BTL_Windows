@@ -44,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -67,11 +69,23 @@
     <Compile Include="NhanVien\frmDoiMatKhau.Designer.cs">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\frmDoiMatKhauNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmDoiMatKhauNhanVien.Designer.cs">
+      <DependentUpon>frmDoiMatKhauNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanVien\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanVien\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\frmQuanLyKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\frmQuanLyKhuyenMai.Designer.cs">
+      <DependentUpon>frmQuanLyKhuyenMai.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\frmQuanTri.cs">
       <SubType>Form</SubType>
@@ -105,8 +119,14 @@
     <EmbeddedResource Include="NhanVien\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\frmDoiMatKhauNhanVien.resx">
+      <DependentUpon>frmDoiMatKhauNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\frmQuanLyKhuyenMai.resx">
+      <DependentUpon>frmQuanLyKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\frmQuanLyLoaiSanPham.resx">
       <DependentUpon>frmQuanLyLoaiSanPham.cs</DependentUpon>
@@ -147,6 +167,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{d9361929-97ca-411a-a15d-96b01956af24}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{07b69ecf-9c39-4b70-b759-7216875adec1}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

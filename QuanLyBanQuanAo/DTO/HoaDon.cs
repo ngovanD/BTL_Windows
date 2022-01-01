@@ -16,7 +16,8 @@ namespace DTO
         }
 
         [Key]
-        public int MaHoaDon { get; set; }
+        [StringLength(14)]
+        public string MaHoaDon { get; set; }
 
         [StringLength(500)]
         public string DiaChi { get; set; }

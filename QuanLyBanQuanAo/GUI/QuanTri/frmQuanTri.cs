@@ -19,7 +19,8 @@ namespace GUI
 
         private void loạiSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new frmQuanLyLoaiSanPham().ShowDialog();
+            this.Close();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using DTO;
 
 namespace BLL
 {
@@ -25,11 +26,21 @@ namespace BLL
 
         public bool KiemTraTaiKhoan(string tenDangNhap, string matKhau)
         {
-            return TaiKhoanDAO.Instance.KiemTraTaiKhoan(tenDangNhap, matKhau);
+            return TaiKhoanDAL.Instance.KiemTraTaiKhoan(tenDangNhap, matKhau);
         }
         public bool LaTaiKhoanNhanVien(string tenDangNhap)
         {
-            return TaiKhoanDAO.Instance.LaTaiKhoanNhanVien(tenDangNhap);
+            return TaiKhoanDAL.Instance.LaTaiKhoanNhanVien(tenDangNhap);
+        }
+
+        public TaiKhoan LayThongTinTaiKhoan(string tenDangNhap)
+        {
+            return TaiKhoanDAL.Instance.LayThongTinTaiKhoan(tenDangNhap);
+        }
+
+        public bool SuaTaiKhoan(TaiKhoan taiKhoan)
+        {
+            return TaiKhoanDAL.Instance.SuaTaiKhoan(taiKhoan);
         }
     }
 }

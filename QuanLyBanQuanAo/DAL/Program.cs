@@ -10,6 +10,10 @@ namespace DAL
     {
         static void Main(string[] args)
         {
+            var a = TaiKhoanDAL.Instance.LayThongTinTaiKhoan("dang");
+         
+
+            Console.WriteLine();
         }
     }
 }

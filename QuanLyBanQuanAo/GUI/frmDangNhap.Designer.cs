@@ -107,6 +107,7 @@ namespace GUI
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

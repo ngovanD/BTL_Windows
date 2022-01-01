@@ -8,18 +8,18 @@ using DTO;
 
 namespace DAL
 {
-    public class TaiKhoanDAO
+    public class TaiKhoanDAL
     {
         private QLBanQuanAoContext db = new QLBanQuanAoContext();
-        private static TaiKhoanDAO instance;
+        private static TaiKhoanDAL instance;
 
-        public static TaiKhoanDAO Instance
+        public static TaiKhoanDAL Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new TaiKhoanDAO();
+                    instance = new TaiKhoanDAL();
                 }
                 return instance;
             }
@@ -30,12 +30,12 @@ namespace DAL
             bool check = db.TaiKhoans.Any(tk => tk.TenDangNhap == tenDangNhap && tk.MatKhau == matKhau);
             return check;
         }
-
+        
         //true: nhan vien, false: admin
         public bool LaTaiKhoanNhanVien(string tenDangNhap)
         {
             var taiKhoan = db.TaiKhoans.SingleOrDefault(tk => tk.TenDangNhap == tenDangNhap);
-            if(taiKhoan.LoaiTaiKhoan == false)
+            if (taiKhoan.LoaiTaiKhoan == false)
             {
                 return false;
             }
@@ -45,5 +45,28 @@ namespace DAL
             }
             
         }
+
+        public TaiKhoan LayThongTinTaiKhoan(string tenDangNhap)
+        {
+            var taiKhoan = db.TaiKhoans.SingleOrDefault(tk => tk.TenDangNhap == tenDangNhap);
+            return taiKhoan;
+        }
+        public bool SuaTaiKhoan(TaiKhoan taiKhoan)
+        {
+            TaiKhoan taiKhoanCanSua = db.TaiKhoans.Where(tk => tk.ID == taiKhoan.ID).FirstOrDefault();
+
+            try
+            {
+                taiKhoanCanSua = taiKhoan;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+        }
+
     }
 }
