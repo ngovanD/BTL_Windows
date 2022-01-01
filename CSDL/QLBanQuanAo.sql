@@ -20,6 +20,7 @@ CREATE TABLE NhanVien(
 	HoTen nvarchar(100),
 	NgaySinh date,
 	DiaChi nvarchar(500),
+<<<<<<< HEAD
 	SoDienThoai varchar(10),
 	IdTK int,
 	FOREIGN KEY(IdTK) REFERENCES TaiKhoan(ID) ON DELETE CASCADE ON UPDATE CASCADE
@@ -39,6 +40,22 @@ CREATE TABLE Luong(
 
 INSERT INTO Luong VALUES(1, GETDATE(), 20, 0, 50000)
 INSERT INTO Luong VALUES(1, '03-03-2021', 20, 0, 50000)
+=======
+	ID int,
+	FOREIGN KEY(ID) REFERENCES TaiKhoan(ID) ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+CREATE TABLE Luong(
+	ID_Luong int IDENTITY(1,1) PRIMARY KEY,
+	MaNhanVien int,
+	ThangNam date,
+	SoNgayCong int,
+	Thuong int,
+	LuongCoBanNgay int,
+	FOREIGN KEY(MaNhanVien) REFERENCES NhanVien(MaNhanVien) ON DELETE CASCADE ON UPDATE CASCADE
+)
+
+>>>>>>> main
 
 CREATE TABLE KhuyenMai(
 	MaKhuyenMai int IDENTITY(1,1) PRIMARY KEY,
@@ -77,6 +94,7 @@ CREATE TABLE SanPham(
 	FOREIGN KEY(MaLoaiSanPham) REFERENCES LoaiSanPham(MaLoaiSanPham) ON DELETE CASCADE ON UPDATE CASCADE
 )
 
+<<<<<<< HEAD
 insert into SanPham values('So mi', 100000, 800000, 'mo ta', 'h1.png', 1)
 insert into SanPham values('So mi 2', 100000, 800000, 'mo ta', 'h1.png', 1)
 insert into SanPham values('So mi 3', 100000, 800000, 'mo ta', 'h1.png', 1)
@@ -85,12 +103,18 @@ insert into SanPham values('dam ', 100000, 800000, 'mo ta', 'h1.png', 2)
 insert into SanPham values('dam 2', 100000, 800000, 'mo ta', 'h1.png', 2)
 
 
+=======
+>>>>>>> main
 CREATE TABLE KichThuoc(
 	ID_KichThuoc int IDENTITY(1,1) PRIMARY KEY,
 	Ten varchar(10)
 )
 
+<<<<<<< HEAD
 CREATE TABLE ChiTietSanPham(
+=======
+CREATE TABLE CHiTietSanPham(
+>>>>>>> main
 	MaSanPham int,
 	ID_KichThuoc int,
 	SoLuongCon int,
@@ -103,7 +127,11 @@ CREATE TABLE ChiTietSanPham(
 CREATE TABLE DongHoaDon(
 	MaSanPham int,
 	ID_KichThuoc int,
+<<<<<<< HEAD
 	MaHoaDon varchar(14),
+=======
+	MaHoaDon int,
+>>>>>>> main
 	SoLuong int,
 	FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSanPham) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY(ID_KichThuoc) REFERENCES KichThuoc(ID_KichThuoc) ON DELETE CASCADE ON UPDATE CASCADE,
