@@ -62,14 +62,14 @@ namespace GUI
             // xemThôngTinToolStripMenuItem
             // 
             this.xemThôngTinToolStripMenuItem.Name = "xemThôngTinToolStripMenuItem";
-            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xemThôngTinToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.xemThôngTinToolStripMenuItem.Text = "Xem thông tin";
             this.xemThôngTinToolStripMenuItem.Click += new System.EventHandler(this.xemThôngTinToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // chứcNăngToolStripMenuItem
@@ -101,6 +101,7 @@ namespace GUI
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmNhanVien";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -45,5 +45,43 @@ namespace DAL
             }
             
         }
+
+        public List<NhanVien> LayToanBo()
+        {
+            return db.NhanViens.ToList();
+        }
+
+        public List<NhanVien> LayTheoTuKhoa(string tuKhoa)
+        {
+            return db.NhanViens.Where(nv => nv.MaNhanVien.ToLower().Contains(tuKhoa.ToLower().Trim()) ||
+                                          nv.HoTen.ToLower().Contains(tuKhoa.ToLower().Trim()) ||
+                                          nv.TaiKhoan.TenDangNhap.ToLower().Contains(tuKhoa.ToLower().Trim())
+                                          ).ToList();
+        }
+
+        public string LayMaNhanVien()
+        {
+            return db.NhanViens.OrderByDescending(nv => nv.MaNhanVien).Select(nv => nv.MaNhanVien).FirstOrDefault();
+        }
+
+        public void CapNhatNhanVien(NhanVien nv, int status)
+        {
+            if (status == 0)
+            {
+                db.NhanViens.Add(nv);
+            }
+            if (status == 1)
+            {
+                TaiKhoan tk = nv.TaiKhoan;
+                db.NhanViens.Remove(nv);
+                db.TaiKhoans.Remove(tk);
+            }
+            db.SaveChanges();
+        }
+
+        public NhanVien LayNhanVienTheoMa(string maNV)
+        {
+            return db.NhanViens.FirstOrDefault(nv => nv.MaNhanVien == maNV);
+        }
     }
 }

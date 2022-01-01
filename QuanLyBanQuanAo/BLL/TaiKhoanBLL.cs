@@ -42,5 +42,10 @@ namespace BLL
         {
             return TaiKhoanDAL.Instance.SuaTaiKhoan(taiKhoan);
         }
+
+        public bool KiemTraTenDangNhap(string tenDN)
+        {
+            return (TaiKhoanDAL.Instance.LayTaiKhoan(tenDN) != null) ? true : false;
+        }
     }
 }

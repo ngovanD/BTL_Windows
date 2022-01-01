@@ -81,11 +81,23 @@
     <Compile Include="NhanVien\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\frmTaoHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\frmTaoHoaDonBan.Designer.cs">
+      <DependentUpon>frmTaoHoaDonBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri\frmQuanLyKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanTri\frmQuanLyKhuyenMai.Designer.cs">
       <DependentUpon>frmQuanLyKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\frmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\frmQuanLyNhanVien.Designer.cs">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\frmQuanTri.cs">
       <SubType>Form</SubType>
@@ -125,11 +137,17 @@
     <EmbeddedResource Include="NhanVien\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\frmTaoHoaDonBan.resx">
+      <DependentUpon>frmTaoHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\frmQuanLyKhuyenMai.resx">
       <DependentUpon>frmQuanLyKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\frmQuanLyLoaiSanPham.resx">
       <DependentUpon>frmQuanLyLoaiSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\frmQuanLyNhanVien.resx">
+      <DependentUpon>frmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\frmQuanTri.resx">
       <DependentUpon>frmQuanTri.cs</DependentUpon>

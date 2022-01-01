@@ -96,5 +96,10 @@ namespace DAL
             db.LoaiSanPhams.Add(loaiSanPham);
             db.SaveChanges();
         }
+
+        public List<LoaiSanPham> LayToanBo()
+        {
+            return db.LoaiSanPhams.ToList();
+        }
     }
 }

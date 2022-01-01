@@ -35,8 +35,15 @@ namespace GUI.QuanTri
             this.label4 = new System.Windows.Forms.Label();
             this.cmbHoaDonNam = new System.Windows.Forms.ComboBox();
             this.dtgvDanhSachHoaDonNhap = new System.Windows.Forms.DataGridView();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.dtgvDanhSachHoaDonBan = new System.Windows.Forms.DataGridView();
+            this.MaHoaDonBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTienBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NhanVienBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,16 +55,9 @@ namespace GUI.QuanTri
             this.SoNgayCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Luong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayTao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbLuongNam = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbLuongThang = new System.Windows.Forms.ComboBox();
-            this.MaHoaDonBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgayBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTienBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NhanVienBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.lblTongLuong = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachHoaDonNhap)).BeginInit();
@@ -121,6 +121,21 @@ namespace GUI.QuanTri
             this.dtgvDanhSachHoaDonNhap.Size = new System.Drawing.Size(509, 150);
             this.dtgvDanhSachHoaDonNhap.TabIndex = 8;
             // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.HeaderText = "Mã hóa đơn";
+            this.MaHoaDon.Name = "MaHoaDon";
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.HeaderText = "Ngày tạo";
+            this.NgayTao.Name = "NgayTao";
+            // 
+            // TongTien
+            // 
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -142,6 +157,26 @@ namespace GUI.QuanTri
             this.dtgvDanhSachHoaDonBan.Name = "dtgvDanhSachHoaDonBan";
             this.dtgvDanhSachHoaDonBan.Size = new System.Drawing.Size(509, 150);
             this.dtgvDanhSachHoaDonBan.TabIndex = 8;
+            // 
+            // MaHoaDonBan
+            // 
+            this.MaHoaDonBan.HeaderText = "Mã hóa đơn";
+            this.MaHoaDonBan.Name = "MaHoaDonBan";
+            // 
+            // NgayBan
+            // 
+            this.NgayBan.HeaderText = "Ngày tạo";
+            this.NgayBan.Name = "NgayBan";
+            // 
+            // TongTienBan
+            // 
+            this.TongTienBan.HeaderText = "Tổng tiền";
+            this.TongTienBan.Name = "TongTienBan";
+            // 
+            // NhanVienBan
+            // 
+            this.NhanVienBan.HeaderText = "Nhân viên bán";
+            this.NhanVienBan.Name = "NhanVienBan";
             // 
             // label6
             // 
@@ -228,21 +263,6 @@ namespace GUI.QuanTri
             this.label2.TabIndex = 13;
             this.label2.Text = "Lương nhân viên tháng: ";
             // 
-            // MaHoaDon
-            // 
-            this.MaHoaDon.HeaderText = "Mã hóa đơn";
-            this.MaHoaDon.Name = "MaHoaDon";
-            // 
-            // NgayTao
-            // 
-            this.NgayTao.HeaderText = "Ngày tạo";
-            this.NgayTao.Name = "NgayTao";
-            // 
-            // TongTien
-            // 
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            // 
             // cmbLuongNam
             // 
             this.cmbLuongNam.FormattingEnabled = true;
@@ -267,26 +287,6 @@ namespace GUI.QuanTri
             this.cmbLuongThang.Name = "cmbLuongThang";
             this.cmbLuongThang.Size = new System.Drawing.Size(45, 21);
             this.cmbLuongThang.TabIndex = 16;
-            // 
-            // MaHoaDonBan
-            // 
-            this.MaHoaDonBan.HeaderText = "Mã hóa đơn";
-            this.MaHoaDonBan.Name = "MaHoaDonBan";
-            // 
-            // NgayBan
-            // 
-            this.NgayBan.HeaderText = "Ngày tạo";
-            this.NgayBan.Name = "NgayBan";
-            // 
-            // TongTienBan
-            // 
-            this.TongTienBan.HeaderText = "Tổng tiền";
-            this.TongTienBan.Name = "TongTienBan";
-            // 
-            // NhanVienBan
-            // 
-            this.NhanVienBan.HeaderText = "Nhân viên bán";
-            this.NhanVienBan.Name = "NhanVienBan";
             // 
             // label9
             // 
@@ -332,6 +332,7 @@ namespace GUI.QuanTri
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "frmThongKe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachHoaDonNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachHoaDonBan)).EndInit();

@@ -220,6 +220,7 @@ namespace GUI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmThongTinTaiKhoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin tài khoản";
             this.Load += new System.EventHandler(this.frmThongTinTaiKhoan_Load);
             this.ResumeLayout(false);

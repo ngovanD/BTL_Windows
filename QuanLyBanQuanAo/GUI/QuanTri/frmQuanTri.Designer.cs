@@ -68,20 +68,20 @@ namespace GUI
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             // 
             // loạiSảnPhẩmToolStripMenuItem
             // 
             this.loạiSảnPhẩmToolStripMenuItem.Name = "loạiSảnPhẩmToolStripMenuItem";
-            this.loạiSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loạiSảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.loạiSảnPhẩmToolStripMenuItem.Text = "Loại sản phẩm";
             this.loạiSảnPhẩmToolStripMenuItem.Click += new System.EventHandler(this.loạiSảnPhẩmToolStripMenuItem_Click);
             // 
             // sảnPhẩmToolStripMenuItem
             // 
             this.sảnPhẩmToolStripMenuItem.Name = "sảnPhẩmToolStripMenuItem";
-            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sảnPhẩmToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.sảnPhẩmToolStripMenuItem.Text = "Sản phẩm";
             // 
             // nhậpHàngToolStripMenuItem
@@ -102,13 +102,13 @@ namespace GUI
             // thốngKếHóaĐơnToolStripMenuItem
             // 
             this.thốngKếHóaĐơnToolStripMenuItem.Name = "thốngKếHóaĐơnToolStripMenuItem";
-            this.thốngKếHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thốngKếHóaĐơnToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.thốngKếHóaĐơnToolStripMenuItem.Text = "Hóa đơn";
             // 
             // thốngKêDoanhThuToolStripMenuItem
             // 
             this.thốngKêDoanhThuToolStripMenuItem.Name = "thốngKêDoanhThuToolStripMenuItem";
-            this.thốngKêDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thốngKêDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.thốngKêDoanhThuToolStripMenuItem.Text = "Doanh thu";
             // 
             // đăngXuấtToolStripMenuItem
@@ -125,6 +125,7 @@ namespace GUI
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmQuanTri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuanLy";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

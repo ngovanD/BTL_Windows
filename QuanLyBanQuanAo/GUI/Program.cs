@@ -18,7 +18,10 @@ namespace GUI
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmDangNhap());
 
-            Application.Run(new frmQuanLyLoaiSanPham());
+            //Application.Run(new frmQuanLyLoaiSanPham());
+
+            Application.Run(new QuanTri.frmQuanLyNhanVien());
+            //Application.Run(new NhanVien.frmTaoHoaDonBan());
         }
     }
 }

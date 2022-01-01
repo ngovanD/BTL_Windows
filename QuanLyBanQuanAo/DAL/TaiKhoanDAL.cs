@@ -68,5 +68,10 @@ namespace DAL
 
         }
 
+        public TaiKhoan LayTaiKhoan(string tenDN)
+        {
+            return db.TaiKhoans.FirstOrDefault(tk => tk.TenDangNhap == tenDN);
+        }
+
     }
 }
