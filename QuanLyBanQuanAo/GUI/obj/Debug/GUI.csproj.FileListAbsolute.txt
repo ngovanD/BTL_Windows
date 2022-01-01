@@ -25,3 +25,9 @@ D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\DTO.pdb
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\DTO.exe.config
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\DAL.pdb
 D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\DAL.exe.config
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\MONHOC\WINDOWS\BTL\BTL_Windows\QuanLyBanQuanAo\GUI\obj\Debug\GUI.csproj.CopyComplete

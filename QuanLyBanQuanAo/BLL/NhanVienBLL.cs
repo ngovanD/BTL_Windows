@@ -36,7 +36,7 @@ namespace BLL
             {
                 dsNV = NhanVienDAL.Instance.LayTheoTuKhoa(tuKhoa);
             }
-            dgv.DataSource = dsNV.Select(nv => new { nv.MaNhanVien, nv.HoTen, nv.NgaySinh, TenDangNhap = nv.TaiKhoan.TenDangNhap, nv.DiaChi }).ToList();
+            dgv.DataSource = dsNV.Select(nv => new { nv.MaNhanVien, nv.HoTen, nv.NgaySinh, TenDangNhap = nv.TaiKhoan.TenDangNhap}).ToList();
             dgv.ClearSelection();
         }
 
@@ -47,7 +47,9 @@ namespace BLL
 
         public string TaoMaNhanVien()
         {
-            return "NV" + NhanVienDAL.Instance.LayMaNhanVien().ToString("000");
+            string maNV = NhanVienDAL.Instance.LayMaNhanVien().Split('V')[1];
+            int ma = Convert.ToInt32(maNV) + 1;
+            return "NV" + ma.ToString("000");
         }
 
         public void CapNhatNhanVien(NhanVien nv, int status)

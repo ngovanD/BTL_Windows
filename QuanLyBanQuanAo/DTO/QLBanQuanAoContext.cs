@@ -21,16 +21,19 @@ namespace DTO
         public virtual DbSet<Luong> Luongs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DongHoaDon>()
                 .Property(e => e.MaHoaDon)
+                .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<HoaDon>()
                 .Property(e => e.MaHoaDon)
+                .IsFixedLength()
                 .IsUnicode(false);
 
             modelBuilder.Entity<KhuyenMai>()

@@ -22,7 +22,8 @@ namespace GUI.QuanTri
 
         private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
-            HienThiMacDinh(true);
+            HienThiMacDinh(true, false);
+            txtMaNV.ReadOnly = true;
         }
         
         private void dgvTaiKhoan_SelectionChanged(object sender, EventArgs e)
@@ -37,22 +38,16 @@ namespace GUI.QuanTri
                 txtMaNV.Text = nv.MaNhanVien;
                 txtHoTen.Text = nv.HoTen;
                 dtpNgaySinh.Value = Convert.ToDateTime(nv.NgaySinh);
-                txtDiaChi.Text = nv.DiaChi;
                 txtTenDN.Text = nv.TaiKhoan.TenDangNhap;
-                txtMatKhau.Text = nv.TaiKhoan.MatKhau;
 
                 txtMaNV.ReadOnly = true;
                 txtHoTen.ReadOnly = true;
                 dtpNgaySinh.Enabled = false;
+                radNam.Enabled = false;
+                radNu.Enabled = false;
                 txtSoDT.ReadOnly = true;
-                txtDiaChi.ReadOnly = true;
                 txtTenDN.ReadOnly = true;
             }
-        }
-        
-        private void txtTenDN_TextChanged(object sender, EventArgs e)
-        {
-            txtMatKhau.Text = txtTenDN.Text;
         }
 
         private void txtSoDT_KeyPress(object sender, KeyPressEventArgs e)
@@ -68,10 +63,6 @@ namespace GUI.QuanTri
             }
         }
 
-        private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             NhanVienBLL.Instance.HienThiDanhSach(dgvNhanVien, txtTimKiem.Text);
@@ -81,7 +72,7 @@ namespace GUI.QuanTri
         {
             if (btnThem.Text == "Thêm")
             {
-                HienThiMacDinh(false);
+                HienThiMacDinh(false, true);
                 txtMaNV.Text = NhanVienBLL.Instance.TaoMaNhanVien();
                 txtMaNV.ReadOnly = true;
                 btnThem.Text = "Lưu";
@@ -110,7 +101,7 @@ namespace GUI.QuanTri
                     TaiKhoan tk = new TaiKhoan()
                     {
                         TenDangNhap = tenDN,
-                        MatKhau = txtTenDN.Text,
+                        MatKhau = tenDN,
                         LoaiTaiKhoan = true,
                     };
 
@@ -119,16 +110,15 @@ namespace GUI.QuanTri
                         MaNhanVien = txtMaNV.Text,
                         HoTen = txtHoTen.Text,
                         NgaySinh = dtpNgaySinh.Value,
-                        DiaChi = txtDiaChi.Text,
                         TaiKhoan = tk,
                     };
 
                     try
                     {
                         NhanVienBLL.Instance.CapNhatNhanVien(nv, 0);
-                        MessageBox.Show("Thêm mới thành công nhân viên! Mật khẩu của nhân viên là tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Thêm mới thành công nhân viên!\nMật khẩu của nhân viên là tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        HienThiMacDinh(true);
+                        HienThiMacDinh(true, false);
                         btnThem.Text = "Thêm";
                     }catch(Exception ex)
                     {
@@ -151,9 +141,9 @@ namespace GUI.QuanTri
                     {
                         nv.TaiKhoan.MatKhau = nv.TaiKhoan.TenDangNhap;
                         NhanVienBLL.Instance.CapNhatNhanVien(nv, 2);
-                        MessageBox.Show("Lấy lại mật khẩu cho nhân viên thành công! Mật khẩu của nhân viên là tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Lấy lại mật khẩu cho nhân viên thành công!\nMật khẩu của nhân viên là tên đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        HienThiMacDinh(true);
+                        HienThiMacDinh(true, false);
                     }
                     catch (Exception ex)
                     {
@@ -183,7 +173,7 @@ namespace GUI.QuanTri
                         NhanVienBLL.Instance.CapNhatNhanVien(nv, 1);
                         MessageBox.Show("Xóa nhân viên thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        HienThiMacDinh(true);
+                        HienThiMacDinh(true, false);
                     }
                     catch (Exception ex)
                     {
@@ -203,7 +193,7 @@ namespace GUI.QuanTri
             Close();
         }
 
-        private void HienThiMacDinh(bool status)
+        private void HienThiMacDinh(bool status, bool kt)
         {
             if (status)
             {
@@ -212,16 +202,19 @@ namespace GUI.QuanTri
             txtMaNV.ReadOnly = false;
             txtMaNV.Text = "";
             txtHoTen.Text = "";
-            txtDiaChi.Text = "";
             txtTenDN.Text = "";
-            txtMatKhau.Text = "";
             dtpNgaySinh.Value = DateTime.Now;
+            radNam.Checked = true;
 
-            txtHoTen.ReadOnly = false;
-            dtpNgaySinh.Enabled = true;
-            txtSoDT.ReadOnly = false;
-            txtDiaChi.ReadOnly = false;
-            txtTenDN.ReadOnly = false;
+            if(kt)
+            {
+                txtHoTen.ReadOnly = false;
+                dtpNgaySinh.Enabled = true;
+                radNam.Enabled = true;
+                radNu.Enabled = true;
+                txtSoDT.ReadOnly = false;
+                txtTenDN.ReadOnly = false;
+            }
         }
 
         public string ChuyenKhongDau(string text)

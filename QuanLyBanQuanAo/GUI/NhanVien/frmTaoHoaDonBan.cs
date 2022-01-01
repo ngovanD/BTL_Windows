@@ -137,7 +137,6 @@ namespace GUI.NhanVien
             }
         }
 
-
         private void btnApDung_Click(object sender, EventArgs e)
         {
 
@@ -168,13 +167,16 @@ namespace GUI.NhanVien
             }
 
             HoaDonBLL.Instance.KhachTra += Convert.ToDecimal(soTien);
-            txt
+            txtTienKhachTra.Text = HoaDonBLL.Instance.KhachTra.ToString();
             CapNhatTienHang();
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-
+            if (HoaDonBLL.Instance.ThanhToanHoaDonBan(lblMaHoaDon.Text))
+            {
+                MessageBox.Show("Thêm thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

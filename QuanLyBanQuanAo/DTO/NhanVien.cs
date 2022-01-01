@@ -36,10 +36,5 @@ namespace DTO
         public virtual ICollection<Luong> Luongs { get; set; }
 
         public virtual TaiKhoan TaiKhoan { get; set; }
-
-        public override string ToString()
-        {
-            return MaNhanVien+" "+HoTen+" "+TaiKhoan.TenDangNhap;
-        }
     }
 }
