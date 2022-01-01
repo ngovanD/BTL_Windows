@@ -21,7 +21,7 @@ namespace DTO
 
         [Key]
         [Column(Order = 2)]
-        [StringLength(13)]
+        [StringLength(14)]
         public string MaHoaDon { get; set; }
 
         public int? SoLuong { get; set; }

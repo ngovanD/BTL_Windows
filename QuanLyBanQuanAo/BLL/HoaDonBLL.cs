@@ -28,7 +28,6 @@ namespace BLL
                 return instance;
             }
         }
-
         public decimal TienHang { get { return tienHang; }}
         public decimal GiamGia { get { return giamGia; }}
         public decimal KhachTra { get { return khachTra; } set { this.khachTra = value; } }
@@ -164,6 +163,37 @@ namespace BLL
             dgv.ClearSelection();
 
             tienHang = Convert.ToDecimal(chiTietHoaDon.Sum(cthd => cthd.SoLuong * cthd.SanPham.DonGiaBan));
+        }
+
+        public bool ThanhToanHoaDonBan(string maHD)
+        {
+            TaiKhoan tk = TaiKhoanDAL.Instance.LayTaiKhoan("The");
+            HoaDon hoaDon = new HoaDon()
+            {
+                MaHoaDon = maHD,
+                ThoiGian = DateTime.Now,
+                LoaiHoaDon = true,
+                TongTien = Convert.ToInt32(tienHang - giamGia),
+            };
+            
+            foreach(var cthd in chiTietHoaDon)
+            {
+                cthd.MaHoaDon = maHD;
+                cthd.KichThuoc = null;
+                cthd.SanPham = null;
+            }
+
+            try
+            {
+                HoaDonDAL.Instance.LuuHoaDon(hoaDon,chiTietHoaDon);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return false;
+            }
         }
 
         public bool isEmpty(string str)

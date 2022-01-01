@@ -35,14 +35,13 @@ namespace DAL
         {
             return db.NhanViens.Where(nv=>nv.MaNhanVien.ToLower().Contains(tuKhoa.ToLower().Trim()) ||
                                           nv.HoTen.ToLower().Contains(tuKhoa.ToLower().Trim()) ||
-                                          nv.DiaChi.ToLower().Contains(tuKhoa.ToLower().Trim()) ||
                                           nv.TaiKhoan.TenDangNhap.ToLower().Contains(tuKhoa.ToLower().Trim())
                                           ).ToList();
         }
 
-        public int LayMaNhanVien()
+        public string LayMaNhanVien()
         {
-            return db.NhanViens.OrderByDescending(nv => nv.MaNhanVien).Select(nv => nv.ID).FirstOrDefault() + 1;
+            return db.NhanViens.OrderByDescending(nv => nv.MaNhanVien).Select(nv => nv.MaNhanVien).FirstOrDefault();
         }
 
         public void CapNhatNhanVien(NhanVien nv, int status)
